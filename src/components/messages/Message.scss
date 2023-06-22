@@ -1,0 +1,73 @@
+.message {
+    width: 80%;
+    border: 1px solid #0088EE;
+    padding: 10px;
+    margin: 10px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    .message__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .message__header-box {
+            display: flex;
+            align-items: center;
+        .message__header-avatar {
+            margin-right: 10px;
+        }
+        .message__header-title {
+            color: #808080;
+            .header-author {
+                font-size: 16px;
+                line-height: 13px;
+                margin-bottom: 6px;
+            }
+            .header-channel {
+                font-size: 12px;
+                line-height: 9px;
+            }
+        }
+    }
+        .like-btn {
+            background: none;
+            padding: 0;
+            border: none;
+            cursor: pointer;
+        }
+    }
+    .message__content {
+        display: flex;
+        margin-bottom: 8px;
+        margin-right: 10px;
+        .content-date {
+            font-size: 14px;
+            color: #808080;
+            margin-right: 10px;
+        }
+        .content {
+            .content-text {
+                font-size: 16px;
+                line-height: 22px;
+            }
+            .message__media {
+                .media-image {
+                    margin-top: 10px;
+                    width: 200px;
+                }
+                .media-video{
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    .teg {
+        font-size: 12px;
+        line-height: 10px;
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+    .active-teg {
+        color: #0088ee;
+    }
+}

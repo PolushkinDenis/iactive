@@ -1,0 +1,27 @@
+.messagesList {
+    .messagesList-menu {
+        height: 40px;
+        width: 100%;
+        background-color: blue;
+        position: fixed;
+        display: flex;
+        top: 0;
+        z-index: 100;
+        align-items: center;
+        justify-content: center;
+        .sort-btn {
+            height: 28px;
+            background: #fff;
+            border: 1px solid #0088EE;
+            color: #0088EE;
+            cursor: pointer;
+            &:hover {
+                background: #0088EE;
+                color: #fff;
+            }
+        }
+    }
+    .messagesList-list {
+        margin-top: 45px;
+    }
+}
