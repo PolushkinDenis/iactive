@@ -29,6 +29,8 @@ const Message: FC<IMessageProps> = ({ message }) => {
         setLikes(newLikes)
     }
 
+    console.log("Message")
+
     return (
         <div className='message'>
             <div className='message__header'>
@@ -72,4 +74,4 @@ const Message: FC<IMessageProps> = ({ message }) => {
     )
 }
 
-export default  React.memo(Message)
+export default Message

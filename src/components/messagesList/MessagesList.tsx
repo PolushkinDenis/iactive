@@ -72,7 +72,8 @@ const MessagesList: FC<MessagesListProps> = ({ messages, messageId }) => {
         if (newMessages === undefined) { // Если не получили данные с предыдущего запроса
             let id = newMessageId
             if(id === 0 && messages.length > 0) {
-                id = messages[messages.length].id
+                console.log(messages)
+                id = messages[messages.length - 1].id
             }
             setTimeout(() => {              
                 dispatch(fetchNewMessages(id))
