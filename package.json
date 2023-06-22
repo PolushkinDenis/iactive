@@ -1,7 +1,7 @@
 {
   "name": "iactive",
   "version": "0.1.0",
-  "homepage": "http://PolushkinDenis.github.io/",
+  "homepage": "http://PolushkinDenis.github.io/iactive",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
