@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/iactive/static/css/main.b0a67353.css",
-    "main.js": "/iactive/static/js/main.5ad34304.js",
+    "main.js": "/iactive/static/js/main.c61abafd.js",
     "index.html": "/iactive/index.html",
     "main.b0a67353.css.map": "/iactive/static/css/main.b0a67353.css.map",
-    "main.5ad34304.js.map": "/iactive/static/js/main.5ad34304.js.map"
+    "main.c61abafd.js.map": "/iactive/static/js/main.c61abafd.js.map"
   },
   "entrypoints": [
     "static/css/main.b0a67353.css",
-    "static/js/main.5ad34304.js"
+    "static/js/main.c61abafd.js"
   ]
 }
