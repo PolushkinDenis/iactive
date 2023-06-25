@@ -1,11 +1,9 @@
 import Messages from './pages/Messages';
 
-const App  = () =>  {
+const App = () => {
   return (
-    
     <div>
-    <Messages />
-
+      <Messages />
     </div>
   );
 }

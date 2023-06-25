@@ -11,7 +11,7 @@ interface MessagesState {
 const initialState: MessagesState = {
     messages: [],
     newMessages: [],
-    oldMessages: []
+    oldMessages: [],
 }
 
 export const messagesSlice = createSlice({
@@ -19,14 +19,25 @@ export const messagesSlice = createSlice({
     initialState,
     reducers: {
         fetchMessages(state, action: PayloadAction<IMessage[]>) {
+            action.payload.map((message) => {
+                message.idSys = Math.random()
+            })
             state.messages.push(...action.payload)
         },
         fetchNewMessages(state, action: PayloadAction<IMessage[]>) {
-            state.newMessages = action.payload
+            if(action.payload !== undefined) {
+                action.payload.map((message) => {
+                    message.idSys = Math.random()
+                })
+                state.newMessages = action.payload
+            }
+            else {
+                state.newMessages = action.payload
+            }
         },
         fetchOldMessages(state, action: PayloadAction<IMessage[]>) {
             action.payload.map((message) => {
-                message.id = Math.random()
+                message.idSys = Math.random()
             })
             state.oldMessages = action.payload
         }

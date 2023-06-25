@@ -4,6 +4,7 @@ interface IAttachment {
 }
 
 export interface IMessage {
+    idSys: number,
     attachments: IAttachment[],
     author: string,
     channel: string,
