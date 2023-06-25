@@ -12,7 +12,24 @@ interface IMessageProps {
 }
 
 const Message: FC<IMessageProps> = ({ message, like, onClick }) => {
-    const [date, setDate] = useState(new Date(message.date))
+    const [date, setDate] = useState<string>("")
+
+    useEffect(() => {
+        const messageDate = new Date(message.date)
+        let messageTime = ""
+        messageDate.getHours() < 10 
+        ? messageTime = "0" + messageDate.getHours()
+        : messageTime += messageDate.getHours()
+        
+        messageTime += ":"
+
+        messageDate.getMinutes() < 10  
+        ? messageTime = "0" + messageDate.getHours()
+        : messageTime += messageDate.getHours()
+
+        setDate(messageTime)
+    }, [])
+
     return (
         <div className='message'>
             <div className='message__header'>
@@ -30,7 +47,7 @@ const Message: FC<IMessageProps> = ({ message, like, onClick }) => {
                 </div>
             </div>
             <div className='message__content'>
-                <div className='content-date'>{date.getHours() + ":" + date.getMinutes()}</div>
+                <div className='content-date'>{date}</div>
                 <div className='content'>
                     <div className='content-text'>{message.content}</div>
                     <div className='message__media'>
